@@ -1,5 +1,6 @@
 
 ### Set working directory ###
+# Please specify the working directory in order to run the analysis
 setwd("D:/Data Scientist Specialisation/Getting and Cleaning Data/project/UCI HAR Dataset")
 
 ### Read data tables ###
