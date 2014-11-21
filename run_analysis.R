@@ -4,12 +4,12 @@ setwd("D:/Data Scientist Specialisation/Getting and Cleaning Data/project/UCI HA
 
 ### Read data tables ###
 
-# Test #
+# Test datasets #
 X_test <- read.table("./Test/X_test.txt")
 y_test <- read.table("./Test/y_test.txt")
 subject_test <- read.table("./Test/subject_test.txt")
 
-# Train #
+# Train datasets#
 
 X_train <- read.table("./Train/X_train.txt")
 y_train <- read.table("./Train/y_train.txt")
@@ -18,11 +18,11 @@ subject_train <- read.table("./Train/subject_train.txt")
 # Activity names 
 activity_names <- read.table("activity_labels.txt")
 
-# variable names 
+# Variable names 
 
 varNames <- read.table("features.txt")
 
-### Exploratory data analysis###
+### Exploratory data analysis ###
 
 head(X_test)
 class(X_test)
@@ -39,24 +39,24 @@ train <- cbind(subject_train, y_train, X_train)
 
 data <- rbind(test,train)
 
-varNames[,2]
 variable <- varNames[,2]
 variable <- as.character(variable)
 
-class(variable)
 names(data) <- c("subject", "activity", variable)
 
 ### Extracts only the measurements 
 ### on the mean and standard deviation for each measurement. 
 
+# Find variables that contains mean and std expression
 mean_std <- grep("[Mm]ean()|[Ss]td()", names(data))
 
-
+# create new dataset with newly selected variables
 data_meanstd <- data[,c(1,2,mean_std)]
 
 ### Format variable names
 
 lowcase <-   function(x) {tolower(x)}
+
 nVarName <- c()
 
 for (i in 1:length(names(data_meanstd) )) {
@@ -67,7 +67,7 @@ for (i in 1:length(names(data_meanstd) )) {
 
 nVarName1 <- gsub("[,|()|-]", "", nVarName)
 
-### Assign formatted variable names to the data set
+### Assign formatted variable names to the dataset
 names(data_meanstd) <- nVarName1
 
 ### Create final dataset
