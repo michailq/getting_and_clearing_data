@@ -1,5 +1,5 @@
 
-### Short description of the data used in the analysis
+## Short description of the data used in the analysis
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -11,9 +11,9 @@ These signals were used to estimate variables of the feature vector for each pat
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
-### Original dataset has been divided into training and test set. Data has been collected from 30 subjects and measures 6 different activities of each subject.
+## Original dataset has been divided into training and test set. Data has been collected from 30 subjects and measures 6 different activities of each subject.
 
-Training set: (7352 observations - 563 variables)
+# Training set: (7352 observations - 563 variables)
   - X_train -  training set has 7352 observations and 561 variables
   - Y_train - activity type - 7352 observations and 1 variable
   - subject_train -subject ID - 7352 observations and 1 variable     
@@ -78,7 +78,7 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
-### Analysis plan
+## Analysis plan
 
 1. Create test and train data sets
 2. Merge two data sets
