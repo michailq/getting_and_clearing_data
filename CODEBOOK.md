@@ -51,7 +51,7 @@ fBodyGyroMag
 fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
-# numeric variables
+# Numeric variables
 mean(): Mean value
 std(): Standard deviation
 mad(): Median absolute deviation 
@@ -83,16 +83,14 @@ tBodyGyroJerkMean
 1. Create test and train data sets
 2. Merge two data sets
 3. Assign variable names to columns 
-4. Extract only variables that contain "[Mm]ean" or [Ss]td in the variable name - we get 86 variable
-
- 
+4. Extract only variables that contain "[Mm]ean" or [Ss]td in the variable name - we get 86 variable, variables that      do not have mean or std in the label are omitted and not taken into account in the next steps of the analysis
 
 5. Create new data set with 88 variables (86 extracted variables + subject ID + activity name)
     New dataset has 10299 observations and 88 variables
-6. We format variable labels. We get eliminate special signs like "-", "()" etc. and introduce lower cases
+6. Format variable labels. Eliminate special signs from variable names like "-", "()" etc. and introduce lower cases
 7. Create tidy dataset - extract mean of each variable for each subject and activity name
 8. Order data by subject ID and activity name
-9. Save tidy data set in the working directory in .txt format
+9. Save tidy data set in .txt format in the working directory
 
 Tidy data set has 180 observations and 88 variables.
 
